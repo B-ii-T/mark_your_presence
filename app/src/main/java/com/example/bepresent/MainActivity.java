@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     String group_str;
     String ip_address;
     int port_number;
-//    int brightness;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
