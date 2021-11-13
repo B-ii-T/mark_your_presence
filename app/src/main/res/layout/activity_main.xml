@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="#FFFFFF"
+    android:orientation="horizontal"
+    android:padding="25dp"
+    android:id="@+id/root"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/first_name_input"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/green"
+        android:hint="Firstname"
+        android:inputType="textPersonName"
+        android:nextFocusForward="@id/last_name_input"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/last_name_input"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@id/first_name_input"
+        android:backgroundTint="@color/green"
+        android:hint="Lastname"
+        android:inputType="textPersonName"
+        android:nextFocusForward="@id/card_number_input"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/card_number_input"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/first_name_input"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/green"
+        android:hint="Card number"
+        android:inputType="number"
+        android:nextFocusForward="@id/group"
+        android:singleLine="true" />
+
+
+    <TextView
+        android:id="@+id/group_label"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@id/last_name_input"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@id/card_number_input"
+        android:gravity="center"
+        android:text="@string/group"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <NumberPicker
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:layout_below="@id/last_name_input"
+        android:layout_toEndOf="@id/group_label"/>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/done" />
+
+
+    <EditText
+        android:id="@+id/ip_input"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/present"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/green"
+        android:hint="IP address"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/port_input"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/present"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="50dp"
+        android:layout_toEndOf="@id/ip_input"
+        android:backgroundTint="@color/green"
+        android:hint="PORT"
+        android:inputType="number"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:id="@+id/present"
+        android:layout_width="250dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/present"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I'm present"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/rise_hand" />
+
+    </LinearLayout>
+
+
+    <!--    <Button-->
+    <!--        android:background="@drawable/present"-->
+    <!--        android:id="@+id/present"-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:shadowColor="@color/black"-->
+    <!--        android:shadowDy="10"-->
+    <!--        android:shadowDx="5"-->
+    <!--        android:layout_height="75dp"-->
+    <!--        android:text="@string/i_m_present"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:textSize="25sp"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginBottom="40dp"-->
+    <!--        android:layout_alignParentBottom="true"/>-->
+
+</RelativeLayout>
